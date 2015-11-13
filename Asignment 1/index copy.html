@@ -1,0 +1,299 @@
+<html>
+<head>
+<title> Assignment 1 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int press;
+int pressed;
+int pass;
+int show;
+int rectHeight;
+int rectLenth;
+int rectLegnth;
+int password;
+int delay; 
+
+Pimages one;
+Pimages two;
+Pimages three;
+Pimages four;
+Pimages five;
+Pimages six;
+Pimages seven;
+Pimages eight;
+Pimages nine;
+Pimages zero;
+Pimages cancel;
+Pimages question;
+
+
+void setup(){
+
+size( 750, 750 );
+rectHeight = 50;
+rectLength = 50;
+rectGap    = 70;
+press = 0;
+pass = 5;
+pressed = 0;
+show = 0;
+delay = 0;
+
+	// IMAGES
+    one = loadImage("PNGS/1.png");
+	two = loadImage("PNGS/2.png");
+	three = loadImage("PNGS/3.png");
+	four = loadImage("PNGS/4.png");
+	five = loadImage("PNGS/5.png");
+	six = loadImage("PNGS/6.png");
+	seven = loadImage("PNGS/7.png");
+	eight = loadImage("PNGS/8.png");
+	nine = loadImage("PNGS/9.png");
+	zero = loadImage("PNGS/0.png");
+	cancel = loadImage("PNGS/c.png");
+	question = loadImage("PNGS/questions.png");
+	star = loadImage("PNGS/star.png");
+	}
+
+
+void draw()
+{
+	background(10,200,200);
+
+	
+	// Row 1 SHAPES
+	rect(rectHeight,rectLength,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength,rectHeight,rectLength);
+	// Row 2
+	rect(rectHeight,rectLength+rectGap,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength+rectGap,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength+rectGap,rectHeight,rectLength);
+	// Row 3
+	rect(rectHeight,rectLength+2*rectGap,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength+2*rectGap,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength+2*rectGap,rectHeight,rectLength);
+	// Row 4
+	rect(rectHeight,rectLength+3*rectGap,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength+3*rectGap,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength+3*rectGap,rectHeight,rectLength);
+	// BOX
+	rect(rectHeight+4*rectGap,rectLength+2*rectGap,rectHeight+4*rectGap,rectLength)
+
+	
+	// Row 1 IMAGES
+	image(one,rectHeight,rectLength,rectHeight,rectLength);
+	image(two,rectHeight+rectGap,rectLength,rectHeight,rectLength);
+	image(three,rectHeight+2*rectGap,rectLength,rectHeight,rectLength);
+	// Row 2
+	image(four,rectHeight,rectLength+rectGap,rectHeight,rectLength);
+	image(five,rectHeight+rectGap,rectLength+rectGap,rectHeight,rectLength);
+	image(six,rectHeight+2*rectGap,rectLength+rectGap,rectHeight,rectLength);
+	// Row 3
+	image(seven,rectHeight,rectLength+2*rectGap,rectHeight,rectLength);
+	image(eight,rectHeight+rectGap,rectLength+2*rectGap,rectHeight,rectLength);
+	image(nine,rectHeight+2*rectGap,rectLength+2*rectGap,rectHeight,rectLength);
+	// Row 4
+	image(zero,rectHeight+rectGap,rectLength+3*rectGap,rectHeight,rectLength);
+	image(cancel,rectHeight+2*rectGap,rectLength+3*rectGap,rectHeight,rectLength);
+	
+	
+	
+
+if (//147
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight && mouseX< 100 && mouseY > 50 && mouseY < 105||
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight && mouseX< 100 && mouseY > 123 && mouseY < 174||
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight && mouseX< 100 && mouseY > 193 && mouseY < 242||
+	//258
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX< 170 && mouseY > 50 && mouseY < 105||
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX< 170 && mouseY > 123 && mouseY < 174||
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX< 170 && mouseY > 193 && mouseY < 242||
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX< 170 && mouseY > 216 && mouseY < 315||
+	//369
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+2*rectGap && mouseX< 240 && mouseY > 50 && mouseY < 105||
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+2*rectGap && mouseX< 240 && mouseY > 123 && mouseY < 174||
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+2*rectGap && mouseX< 240 && mouseY > 193 && mouseY < 242||
+	//0c
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX < 170 && mouseY > 123 && mouseY < 174|| 
+	mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+2*rectGap && mouseX < 240 && mouseY > 193 && mouseY < 242){
+ 	
+ 	if (pressed == 0){
+ 	press = 1;
+	}
+	
+	if (pressed == 1){
+ 	press = 2;
+	}
+	
+	if (pressed == 2){
+ 	press = 3;
+	}
+	
+	if (pressed == 3){
+ 	press = 4;
+	}
+	if (pressed == 4){
+	pressed = 4
+	
+	}
+	
+//1
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight && mouseX< 100 && mouseY > 50 && mouseY < 105){
+	pass = 1 
+}
+
+//4
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight && mouseX< 100 && mouseY > 123 && mouseY < 174){
+	pass = 4
+}
+
+//7
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight && mouseX< 100 && mouseY > 193 && mouseY < 242){
+	pass = 7
+}
+
+//2
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX< 170 && mouseY > 50 && mouseY < 105){
+	pass = 2
+}
+
+//5
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX< 170 && mouseY > 123 && mouseY < 174){
+	pass = 5
+}
+
+//8
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX< 170 && mouseY > 216 && mouseY < 315){
+	pass = 8
+}
+//3
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+2*rectGap && mouseX< 240 && mouseY > 50 && mouseY < 105){
+	pass = 3
+}
+
+//6
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+2*rectGap && mouseX< 240 && mouseY > 123 && mouseY < 174){
+	pass = 6
+}
+
+//9
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+2*rectGap && mouseX< 240 && mouseY > 193 && mouseY < 242){
+	pass = 9
+}
+
+//0
+if (mousePressed == true && mouseButton == LEFT && mouseX > rectHeight+rectGap && mouseX < 170 && mouseY > 123 && mouseY < 174){
+	pass = 0
+}
+
+if (mousePressed == true && mouseButton == LEFT && press == 1 ){
+	password = (1000 * pass)
+	
+	
+	}
+	if (mousePressed == true && mouseButton == LEFT && press==2 ){
+	password = password + (100 * pass);
+	
+	}
+	if (mousePressed == true && mouseButton == LEFT && press==3 ){
+	password = password + (10 * pass);
+	
+	}
+	if (mousePressed == true && mouseButton == LEFT && press==4){
+	password = password + (1 * pass);
+	
+	}
+	if (mousePressed == true && mouseButton == LEFT && press==4 && password == 1234){
+	link("welcome.html")
+	}
+	
+	
+
+
+
+
+if (mousePressed == false){
+		
+		if (press == 1){
+ 		show = 1;
+		}
+	
+		if (press == 2){
+ 		show = 2;
+		}
+	
+		if (press == 3){
+ 		show = 3;
+		}
+	
+		if (press == 4){
+ 		show = 4;
+		}
+		if (pass == 1234){
+		link("welcome.html")
+		}
+	
+	
+	
+		
+
+	}
+	
+		if(show >= 1){
+		image(star,rectHeight+4*rectGap,rectLength+2*rectGap);
+		pressed = 1;
+		}
+
+		if(show >= 2){
+		image(star,rectHeight+5*rectGap,rectLength+2*rectGap);
+		pressed = 2;
+		}
+		
+		if(show >= 3){
+		image(star,rectHeight+6*rectGap,rectLength+2*rectGap);
+		pressed = 3;
+		}
+		
+		if(show >= 4){
+		
+		image(star,rectHeight+7*rectGap,rectLength+2*rectGap);
+		show = 4;
+		
+		}
+
+
+
+	
+
+	
+	}
+
+	
+
+		
+		
+	fill(255,255,255);
+	text(mouseX,400,10);
+	text(mouseY,400,60);
+	text(password,300,100);
+	
+			
+			
+
+			
+		
+
+
+
+	
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
